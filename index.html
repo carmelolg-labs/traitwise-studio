@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TraitWise Studio</title>
+  <meta name="description" content="Costruisci visualmente il file config.yaml per un quiz TraitWise, senza scrivere YAML a mano." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <datalist id="category-options"></datalist>
+
+  <div class="app">
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <p class="brand-name">TraitWise Studio</p>
+          <p class="brand-tagline">Costruisci il tuo quiz senza scrivere YAML a mano</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <label class="btn btn-secondary btn-file">
+          Importa da file
+          <input id="file-import" type="file" accept=".yaml,.yml,text/yaml" hidden />
+        </label>
+        <button id="btn-paste-toggle" type="button" class="btn btn-secondary">Incolla YAML</button>
+        <button id="btn-reset" type="button" class="btn btn-secondary">Ricomincia da zero</button>
+      </div>
+    </header>
+
+    <p id="import-error" class="import-error" hidden></p>
+
+    <div id="paste-import-panel" class="paste-import-panel" hidden>
+      <label class="field-label" for="paste-import-textarea">Incolla qui il contenuto di un config.yaml</label>
+      <textarea id="paste-import-textarea" rows="12" placeholder="meta:&#10;  title: &quot;...&quot;&#10;..."></textarea>
+      <div class="paste-import-actions">
+        <button id="btn-paste-cancel" type="button" class="btn btn-secondary">Annulla</button>
+        <button id="btn-paste-confirm" type="button" class="btn btn-primary">Importa questo testo</button>
+      </div>
+    </div>
+
+    <main class="layout">
+      <div id="form-root" class="form-column"></div>
+
+      <aside class="preview-column">
+        <div class="preview-sticky">
+          <div id="validation-banner" class="validation-banner" hidden></div>
+          <ul id="validation-list" class="validation-list"></ul>
+
+          <div class="preview-actions">
+            <button id="btn-copy" type="button" class="btn btn-secondary">Copia</button>
+            <button id="btn-download" type="button" class="btn btn-primary">Scarica config.yaml</button>
+          </div>
+
+          <pre id="yaml-preview" class="yaml-preview" aria-label="Anteprima del file YAML generato"></pre>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

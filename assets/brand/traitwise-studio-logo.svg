@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 120" role="img" aria-label="TraitWise Studio">
+  <!-- Card background: keeps the wordmark readable regardless of the page theme it's embedded in -->
+  <rect x="0" y="0" width="480" height="120" rx="20" fill="#fdf6ec"/>
+
+  <!-- Mark: same four answer "facets" as TraitWise, for brand continuity -->
+  <rect x="10" y="10" width="100" height="100" rx="24" fill="#201b18"/>
+  <path d="M60,60 L60,24 A36,36 0 0,1 96,60 Z" fill="#ff6b6b"/>
+  <path d="M60,60 L96,60 A36,36 0 0,1 60,96 Z" fill="#4d8b7c"/>
+  <path d="M60,60 L60,96 A36,36 0 0,1 24,60 Z" fill="#e0a11c"/>
+  <path d="M60,60 L24,60 A36,36 0 0,1 60,24 Z" fill="#3a6ea5"/>
+  <circle cx="60" cy="60" r="11" fill="#fdf6ec"/>
+
+  <!-- Wordmark -->
+  <text x="140" y="64" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif" font-size="36" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="#201b18">Trait</tspan><tspan fill="#ff6b6b">Wise</tspan>
+  </text>
+
+  <!-- "Studio" badge: same wordmark family, distinguishes the companion editor from the main app -->
+  <rect x="140" y="76" width="92" height="24" rx="12" fill="#ece2d3"/>
+  <text x="186" y="93" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="2" fill="#6b6259">STUDIO</text>
+</svg>
